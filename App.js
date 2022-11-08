@@ -5,6 +5,7 @@ import styles from './styles';
 // import jokes Punchine, and other componantes 
 import Joke from './components/Joke';
 import Punchline from './components/Punchline';
+import Another from './components/Another';
 
 export default function App() {
   // create state to hold jokes 
@@ -14,7 +15,6 @@ export default function App() {
   // create function to get another 
   const getNextJoke = () => {
     if(currentJokeIndex < jokeList.length - 1) {
-
       setCurrentJokeIndex(currentJokeIndex + 1)
 
     }else {
@@ -30,10 +30,16 @@ export default function App() {
   }, [])
   return (
     <View style={styles.container}>
+      {jokeList
+      
+      ? <>
       <Joke joke={jokeList[currentJokeIndex].setup} />
       <Punchline punchline={jokeList[currentJokeIndex].punchline} />
-      
-      <StatusBar style="auto" />
+      </>
+      :null
+}
+      <Another getNextJoke={getNextJoke} />
+      <StatusBar style='auto' /> 
     </View>
   );
 }

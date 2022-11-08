@@ -6,7 +6,7 @@ const styles= StyleSheet.create({
           flex: 1,
           backgroundColor: '#ff00ff',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-around',
         },
 jokeText: {
     textAlign: 'center',
@@ -14,13 +14,25 @@ jokeText: {
     
 
 },
-punchlines: {
+punchline: {
     textAlign: 'center',
     color: '#c00',
     fontSize: 32,
     
    
 },
+bigButton: {
+    backgroundColor: 'blue',
+    padding:'8px 48px',
+    borderRadius: 6,
+
+
+
+},
+buttonText: {
+    color:  'white',
+    fontSize: 40,
+}
 
 })
 
