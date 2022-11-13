@@ -7,6 +7,7 @@ import styles from '../styles'
 
 export default function Punchline({ punchline }) {
     const [reveal, setReveal]= useState(false)
+    useEffect(false)
     return (
         <Text style={styles.punchline}>{punchline}</Text>
     )
